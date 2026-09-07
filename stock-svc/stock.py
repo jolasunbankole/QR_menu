@@ -7,8 +7,8 @@ stock_data = {'stock':
     {"Coffee": {"Name": "cappuccino", "Price": 3.5},}
 }
 
-
-@app.route('/get-order')
+#route get-stock to return json data of stock_data
+@app.route('/get-stock')
 def get_stock():
     # return the stock data as a JSON response
     data = json.dumps(stock_data)
@@ -19,7 +19,7 @@ if __name__ == '__main__':
 
 @app.route('/add-menu', methods=['POST'])
 def add_product():
-
+    # get the product data from the request body
     product = {
         "Name": request.json['Name'],
         "Price": request.json['Price']
