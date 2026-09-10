@@ -16,7 +16,7 @@ def add_menu():
         "Name": request.form['Name'],
         "Price": request.form['Price']
     }
-    requests.post('http://stock:5000/add-menu', timeout=5)
+    requests.post('http://menu:5000/add-menu', timeout=5)
     return "Success"
 
 if __name__ == '__main__':
